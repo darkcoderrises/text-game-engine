@@ -1,6 +1,17 @@
 class GameMapError(Exception):
     pass
 
+class bcolors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    WARNING = '\033[93m'
+    PINK = '\033[95m'
+    AQUA = '\033[96m'
+    BLACK = '\033[90m'
+    RED = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 class GameMap(object):
     """Object representing game map state.
@@ -100,18 +111,6 @@ class GameMap(object):
     
     def DebugInfo(self, y_player=None, x_player=None):
         """Debug method to visualize game board."""
-        class bcolors:
-            BLUE = '\033[94m'
-            GREEN = '\033[92m'
-            WARNING = '\033[93m'
-            PINK = '\033[95m'
-            AQUA = '\033[96m'
-            BLACK = '\033[90m'
-            RED = '\033[91m'
-            ENDC = '\033[0m'
-            BOLD = '\033[1m'
-            UNDERLINE = '\033[4m'
-
         output_rows = []
         for y in range(self.height):
             curr_row = []
